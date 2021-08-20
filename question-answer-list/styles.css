@@ -1,0 +1,35 @@
+.main-content{
+    display: flex;
+    width: 100%;
+}
+.content{
+    width: 70% ;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.form-infor{
+    width: 30%;
+    height: 500px;
+}
+.question-answer{
+    display: flex;
+    flex-direction: column;
+
+}
+.quesition{
+    border: 2px  solid #0075D0;
+    background-color: #F5E7E4;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.answer{
+    border: 2px  solid #0075D0;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 4px;
+}
