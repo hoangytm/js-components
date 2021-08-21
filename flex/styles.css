@@ -3,13 +3,14 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: -10px;
-    --column: 4
+    --column: 4;
+    --spacing: 10px;
 }
 
 .card{
-    width: calc( calc( 100% / var(--column)) - 10px);
-    margin-left: 10px;
-   background-color: antiquewhite; 
+    width: calc( calc( 100% / var(--column)) - var( --spacing));
+    margin-left: var( --spacing );
+    background-color: antiquewhite; 
     margin-bottom: 5px; 
 }
 .header{
@@ -17,6 +18,11 @@
     border-bottom: 1px solid black;
     width: 100%;
 
+}
+@media screen and (max-width:812px ){
+    .cards{
+        --column: 1 
+    }
 }
 .avatar{
     width: 30%;
