@@ -1,0 +1,40 @@
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    --column: 4
+}
+
+.card{
+    width: calc( calc( 100% / var(--column)) - 10px);
+    margin-left: 10px;
+   background-color: antiquewhite; 
+    margin-bottom: 5px; 
+}
+.header{
+    display: flex;
+    border-bottom: 1px solid black;
+    width: 100%;
+
+}
+.avatar{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-top: 20px;
+}
+.info{
+    width: 70%;
+    padding-top: 20px;
+    line-height: 1.8;
+}
+.title{
+    font-weight: bold;
+}
+.name{
+    font-weight: bold;
+}
