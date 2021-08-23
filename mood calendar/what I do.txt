@@ -1,0 +1,6 @@
+1. layout website
+2. create card day in month 
+     check xem tháng đó có bao nhiêu ngày
+     kiểm tra xem có phải năm nhuần hay không? new Đate().getFullYear()%4
+     ngày đầu tiên tháng bắt đầu từ thứ nào get date
+     

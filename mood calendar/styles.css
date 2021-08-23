@@ -1,0 +1,87 @@
+.main-content{
+    margin-left:5% ;
+    margin-right:5%;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    
+}
+.months{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    justify-content: center;
+
+}
+.month{
+    --width:350px;
+    width: var( --width);
+    height: 350px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+    
+}
+.name{
+    width: var( --width);
+    display: flex;
+    justify-content: center;
+    font-style:  italic;
+}
+.date{
+    width: calc( var( --width) / 7 ) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.date-title{
+    width: calc( var( --width) / 7) ;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.block{
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.block1{
+    background-color: #FF9A00;
+}.block2{
+    background-color: #33CBCB;
+}.block3{
+    background-color: #FFBAA8;
+}
+.reset{
+    background-color: #FFBAA8;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reset:hover{
+    background-color: red;
+}
