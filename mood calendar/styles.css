@@ -1,8 +1,25 @@
+body{
+    background-color: #323975;
+    display: flex;
+}
+.fa-snowflake {
+	color: #fff;
+	position: absolute;
+	top: -20px;
+	animation: fall linear forwards;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(105vh);
+	}
+}
 .main-content{
     margin-left:5% ;
     margin-right:5%;
 }
 .title{
+    color:red;
     display: flex;
     flex-direction: column;
     justify-items: center;

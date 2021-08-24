@@ -3,9 +3,7 @@ console.log('js is loaded')
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const COLORS = ['#FF9A00', '#33CBCB', '#FFBAA8']
-
 let currentEmotion = 'red'
-
 const date = new Date();
 const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
 const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
@@ -77,7 +75,7 @@ function addListener() {
     let colors = document.querySelectorAll('.block')
     colors.forEach(item => {
         item.addEventListener('click', () => {
-            currentEmotion = rgb2hex(window.getComputedStyle(item).backgroundColor).toUpperCase()
+            currentEmotion = window.getComputedStyle(item).backgroundColor
             colors.forEach(item => {
                 item.style.border = ''
             })
@@ -90,21 +88,39 @@ function addListener() {
 
 }
 
+function createSnowFlake() {
+	// Creating the <i> tag
+	const snow_flake = document.createElement('i');
+	// Adding the required classes for the FontAwesome icon to show up
+	snow_flake.classList.add('fas');
+	snow_flake.classList.add('fa-snowflake');
 
-var hexDigits = new Array
-    ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f");
+	// Randomly generate the width to be between 10 and 20 px
+	snow_flake.style.width = Math.random() * 10 + 10 + 'px';
 
-//Function to convert rgb color to hex format
-function rgb2hex(rgb) {
-    rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
-}
+	// Randomly generate the left position to be between 0 and the innerWidth of the screen
+	snow_flake.style.left = Math.random() * window.innerWidth + 'px';
 
-function hex(x) {
-    return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
+	// Randomly generate the animationDuration - between 2 and 5 seconds
+	snow_flake.style.animationDuration = Math.random() * 3 + 2 + 's';
+
+	// Randomly add an opacity - between 0 and 1
+	snow_flake.style.opacity = Math.random();
+
+	// Add the newly created <i> tag inside the <body> tag
+    let body = document.getElementById('body')
+	body.appendChild(snow_flake);
+
+
+	// Set a timeout to remove the snow_flake from the DOM after 5 seconds
+	// as we don't want it to overload the page
+	setTimeout(() => {
+		snow_flake.remove();
+	}, 5000);
 }
 
 run()
 randomColor()
 addListener()
+setInterval(createSnowFlake,50)
 
