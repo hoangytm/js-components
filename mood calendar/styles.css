@@ -11,7 +11,7 @@ body{
 
 @keyframes fall {
 	to {
-		transform: translateY(105vh);
+		transform: translateY(300vh);
 	}
 }
 .main-content{

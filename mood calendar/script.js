@@ -102,7 +102,7 @@ function createSnowFlake() {
 	snow_flake.style.left = Math.random() * window.innerWidth + 'px';
 
 	// Randomly generate the animationDuration - between 2 and 5 seconds
-	snow_flake.style.animationDuration = Math.random() * 3 + 2 + 's';
+	snow_flake.style.animationDuration = Math.random() * 3 + 15 + 's';
 
 	// Randomly add an opacity - between 0 and 1
 	snow_flake.style.opacity = Math.random();
@@ -116,7 +116,7 @@ function createSnowFlake() {
 	// as we don't want it to overload the page
 	setTimeout(() => {
 		snow_flake.remove();
-	}, 5000);
+	}, 15000);
 }
 
 run()
